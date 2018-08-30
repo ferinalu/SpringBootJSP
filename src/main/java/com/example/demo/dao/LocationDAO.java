@@ -5,48 +5,27 @@
  */
 package com.example.demo.dao;
 
-import com.example.demo.entities.Locations;
 import java.util.List;
-import org.hibernate.SessionFactory;
+import com.example.demo.pojo.Locations;
+import tools.HibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 /**
  *
- * @author Ignatius
+ * @author BINTANG
  */
 public class LocationDAO {
-
-    private final FunctionDAO fdao;
-
-    public LocationDAO(SessionFactory factory) {
-        this.fdao = new FunctionDAO(factory);
+     public static List<Locations> layDS(){
+        List<Locations> lst = null;
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            String hql = "from Locations";
+            Query query = session.createQuery(hql);
+            lst = query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lst;
     }
-
-    public boolean insertOrUpdate(Locations locations) {
-        return this.fdao.insertOrUpdate(locations);
-    }
-
-    public List<Object> search(String category, String data) {
-        return this.fdao.get("FROM Locations WHERE " + category + " LIKE '%" + data + "%'");
-
-    }
-
-    /**
-     * Fungsi untuk menampilkan semua data pada table Location
-     *
-     * @return memanggil fungsi get dari FunctionDAO
-     */
-    public List<Object> getAll() {
-        return this.fdao.get("FROM Locations");
-    }
-
-    /**
-     * Fungsi DAO untuk mengambil data dari tabel Location berdasarkan ID
-     *
-     * @param locationId String
-     * @return Location
-     */
-    public Locations getLocationById(String locationId) {
-        return (Locations) this.fdao.getById("FROM Locations WHERE locationId='" + locationId + "'");
-    }
-
 }

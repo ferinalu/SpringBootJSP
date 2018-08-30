@@ -1,4 +1,4 @@
-package org.o7planning.sbjdbc;
+package org.bootstrap.sbjdbc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

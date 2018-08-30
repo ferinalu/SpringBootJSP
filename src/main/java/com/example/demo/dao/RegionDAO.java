@@ -5,43 +5,27 @@
  */
 package com.example.demo.dao;
 
-import com.example.demo.entities.Regions;
 import java.util.List;
-import org.hibernate.SessionFactory;
+import com.example.demo.pojo.Regions;
 import tools.HibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 /**
  *
- * @author Ignatius
+ * @author BINTANG
  */
 public class RegionDAO {
-    private final FunctionDAO fdao;
-
-    public RegionDAO(SessionFactory factory) {
-        this.fdao = new FunctionDAO(factory);
+    public static List<Regions> layDS(){
+        List<Regions> lst = null;
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            String hql = "from Regions";
+            Query query = session.createQuery(hql);
+            lst = query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lst;
     }
-
-    public boolean insertOrUpdate(Regions regions) {
-        return this.fdao.insertOrUpdate(regions);
-    }
-     public  List<Object> search(String category, String data){
-     return this.fdao.get("FROM Regions WHERE "+category+" LIKE '%"+data+"%'");
-    
-   }
-    
-   /**
-     * Fungsi untuk menampilkan semua data pada table Region
-     * @return memanggil fungsi get pada FunctionDAO
-     */
-    public List<Object> getAll(){
-        return this.fdao.get("FROM Regions");
-    }
-    /**
-     * Fungsi get job by ID
-     * @param regionId String
-     * @return 
-     */
-    public Regions getRegionById(String regionId){
-        return (Regions) this.fdao.getById("FROM Regions WHERE regionId='"+regionId+"'");
-}
 }

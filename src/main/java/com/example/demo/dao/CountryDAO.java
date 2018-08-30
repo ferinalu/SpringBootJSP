@@ -5,59 +5,27 @@
  */
 package com.example.demo.dao;
 
-import com.example.demo.entities.Countries;
 import java.util.List;
-import org.hibernate.SessionFactory;
+import com.example.demo.pojo.Countries;
+import tools.HibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 /**
  *
- * @author Ignatius
+ * @author BINTANG
  */
 public class CountryDAO {
-
-    private FunctionDAO fdao;
-
-    public CountryDAO(SessionFactory factory) {
-        this.fdao = new FunctionDAO(factory);
-    }
-
-        /**
-     * Fungsi untuk menambah dan mengedit data
-     * @param country - instansiasi dari Object
-     * @return memanggil fungsi insertOrUpdate pada fungsi fdao
-     */
-    public boolean insertOrUpdate(Countries countries){
-        return this.fdao.insertOrUpdate(countries);
-    }
-    
-    /**
-     * Fungsi untuk menampilkan semua data dari Country
-     *
-     * @return List data
-     */
-    public List<Object> getAll() {
-        return this.fdao.get("FROM Countries");
-    }
-
-    /**
-     * Fungsi getById mengambil data berdasarkan id tertentu pada tabel
-     * countries
-     *
-     * @param countryId id dari tabel countries
-     * @return Country sebagai object dari class country
-     */
-    public Countries getById(String countryId) {
-        return (Countries) this.fdao.getById("FROM Countries WHERE countryId='" + countryId + "'");
-    }
-
-    /**
-     * Fungsi search
-     *
-     * @param category - kolum apa yang kita cari
-     * @param data = apa yang kita cari
-     * @return List - List object from Jobs table
-     */
-    public List<Object> search(String category, String data) {
-        return this.fdao.get("FROM Countries WHERE REGEXP_LIKE(" + category + ",'%" + data + "%','i')"); // query tersebut merupakan HQL //
+    public static List<Countries> layDS(){
+        List<Countries> lst = null;
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            String hql = "from Countries";
+            Query query = session.createQuery(hql);
+            lst = query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lst;
     }
 }

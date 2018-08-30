@@ -1,8 +1,10 @@
 package com.example.demo.controller;
+import com.example.demo.dao.RegionDAO;
 	import java.util.ArrayList;
 	import java.util.List;
 	 
 	import com.example.demo.model.Person;
+import com.example.demo.pojo.Regions;
 	import org.springframework.stereotype.Controller;
 	import org.springframework.ui.Model;
 	import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +37,15 @@ package com.example.demo.controller;
 	 
 	        return "personList";
 	    }
+            
+            @RequestMapping(value = {"/regionList"},method = RequestMethod.GET)
+            public String viewRegionList(Model model){
+                List<Regions> list = RegionDAO.layDS();
+                
+                model.addAttribute("regions",list);
+                return "region";
+            }
+            
 	 
 	
 }

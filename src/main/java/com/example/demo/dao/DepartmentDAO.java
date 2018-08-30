@@ -5,41 +5,28 @@
  */
 package com.example.demo.dao;
 
-import com.example.demo.entities.Departments;
 import java.util.List;
-import org.hibernate.SessionFactory;
+import com.example.demo.pojo.Departments;
+import tools.HibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 /**
  *
- * @author Ignatius
+ * @author BINTANG
  */
 public class DepartmentDAO {
-    
-    private FunctionDAO fdao;
-
-    public DepartmentDAO(FunctionDAO functionDAO) {
-        this.fdao = functionDAO;
+    public static List<Departments> layDS(){
+        List<Departments> lst = null;
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            String hql = "from Departments";
+            Query query = session.createQuery(hql);
+            lst = query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lst;
     }
     
-    /**
-     * fungsi tampil data / get all
-     * @return list object from department
-     */
-    public List<Object> getAll() {
-        return this.fdao.get("from Departments");
-    }
-    
-    /**
-     * Fungsi yang digunakan untuk mencari data Department
-     * @param category - what column we will find
-     * @param data - what we will find
-     * @return List
-     */
-    public List<Object> search(String category, String data){
-        return  this.fdao.get("FROM Departments WHERE " +category+ " LIKE '%" +data+ "%'");
-    }
-    public Departments getDepartmentById(Integer departmentId) {
-        return (Departments) this.fdao
-                .getById("FROM Departments WHERE departmentId='" + departmentId + "'");
-    }
 }

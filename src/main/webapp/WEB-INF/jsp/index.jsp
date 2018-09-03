@@ -28,19 +28,19 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="countries.htm"><span data-feather="file"></span> Country</a>
+                                <a class="nav-link" href="countrie"><span data-feather="file"></span> Country</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="departments.htm"><span data-feather="shopping-cart"></span> Department</a>
+                                <a class="nav-link" href="department"><span data-feather="shopping-cart"></span> Department</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="employees.htm"><span data-feather="users"></span> Employee</a>
+                                <a class="nav-link" href="employee"><span data-feather="users"></span> Employee</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="jobs.htm"><span data-feather="bar-chart-2"></span> Job</a>
+                                <a class="nav-link" href="job"><span data-feather="bar-chart-2"></span> Job</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="locations.htm"><span data-feather="layers"></span> Location</a>
+                                <a class="nav-link" href="location"><span data-feather="layers"></span> Location</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="region"><span data-feather="layers"></span> Region</a>

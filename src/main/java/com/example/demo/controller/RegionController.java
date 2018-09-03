@@ -5,29 +5,25 @@
  */
 package com.example.demo.controller;
 
-import java.util.List;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import com.example.demo.dao.RegionDAO;
 import com.example.demo.pojo.Regions;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  *
- * @author BINTANG
+ * @author misbah alkhafadh
  */
-public class RegionController implements Controller{
+public class RegionController {
+    private static List<Regions> region = new ArrayList<Regions>();
+    
+    @RequestMapping(value = {"/region"}, method = RequestMethod.GET)
+    public String viewRegionList(Model model) {
+//        List<Regions> list = RegionDAO.layDS();
 
-    @Override
-    public ModelAndView handleRequest(HttpServletRequest hsr, HttpServletResponse hsr1) throws Exception {
-        ModelAndView mv = new ModelAndView("regions");
-        try {
-            List<Regions> lst = RegionDAO.layDS();
-            mv.addObject("regions",lst);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return mv;
+        model.addAttribute("regions", region);
+        return "region";
     }
 }

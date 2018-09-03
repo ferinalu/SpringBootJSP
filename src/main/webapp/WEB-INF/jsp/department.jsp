@@ -1,6 +1,6 @@
 <%-- 
-    Document   : location
-    Created on : Sep 3, 2018, 11:47:07 AM
+    Document   : department
+    Created on : Sep 3, 2018, 12:46:23 PM
     Author     : misbah alkhafadh
 --%>
 
@@ -37,16 +37,16 @@
                                 <a class="nav-link" href="country"><span data-feather="file"></span> Country</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="department"><span data-feather="shopping-cart"></span> Department</a>
+                                <a class="nav-link active" href="department"><span data-feather="shopping-cart"></span> Department</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="employee"><span data-feather="users"></span> Employee</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="job"><span data-feather="bar-chart-2"></span> Job</a>
+                                <a class="nav-link " href="job"><span data-feather="bar-chart-2"></span> Job</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="location"><span data-feather="layers"></span> Location</a>
+                                <a class="nav-link" href="location"><span data-feather="layers"></span> Location</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="region"><span data-feather="layers"></span> Region</a>
@@ -78,7 +78,7 @@
 
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Location</h1>
+                        <h1 class="h2">Department</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <div class="btn-group mr-2">
                                 <button class="btn btn-sm btn-outline-secondary">Share</button>
@@ -155,7 +155,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!--End Table-->
+                    <!--End Table--> 
                 </main>
             </div>
         </div>

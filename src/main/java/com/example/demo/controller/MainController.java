@@ -39,9 +39,40 @@ public class MainController {
         return "personList";
     }
 
+    @RequestMapping(value = {"/country"}, method = RequestMethod.GET)
+    public String viewCountry(Model model) {
+
+        return "country";
+    }
+    
+    @RequestMapping(value = {"/department"}, method = RequestMethod.GET)
+    public String viewDepartment(Model model) {
+
+        return "department";
+    }
+    
+    @RequestMapping(value = {"/employee"}, method = RequestMethod.GET)
+    public String viewEmployee(Model model) {
+
+        return "employee";
+    }
+    
+    @RequestMapping(value = {"/job"}, method = RequestMethod.GET)
+    public String viewJob(Model model) {
+
+        return "job";
+    }
+    
+    @RequestMapping(value = {"/location"}, method = RequestMethod.GET)
+    public String viewLocation(Model model) {
+
+        return "location";
+    }
+    
     @RequestMapping(value = {"/region"}, method = RequestMethod.GET)
-    public String viewRegionList(Model model) {
+    public String viewRegion(Model model) {
 
         return "region";
     }
+    
 }

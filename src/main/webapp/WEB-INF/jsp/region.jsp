@@ -28,19 +28,19 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="countries"><span data-feather="file"></span> Country</a>
+                                <a class="nav-link" href="country"><span data-feather="file"></span> Country</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="departments"><span data-feather="shopping-cart"></span> Department</a>
+                                <a class="nav-link" href="department"><span data-feather="shopping-cart"></span> Department</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="employees"><span data-feather="users"></span> Employee</a>
+                                <a class="nav-link" href="employee"><span data-feather="users"></span> Employee</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="jobs"><span data-feather="bar-chart-2"></span> Job</a>
+                                <a class="nav-link" href="job"><span data-feather="bar-chart-2"></span> Job</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="locations"><span data-feather="layers"></span> Location</a>
+                                <a class="nav-link" href="location"><span data-feather="layers"></span> Location</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="region"><span data-feather="layers"></span> Region</a>
@@ -72,7 +72,7 @@
 
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Dashboard</h1>
+                        <h1 class="h2">Region</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <div class="btn-group mr-2">
                                 <button class="btn btn-sm btn-outline-secondary">Share</button>
@@ -84,7 +84,72 @@
                             </button>
                         </div>
                     </div>
-                    hai
+                    <!--Table-->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>sit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,002</td>
+                                    <td>amet</td>
+                                    <td>consectetur</td>
+                                    <td>adipiscing</td>
+                                    <td>elit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>Integer</td>
+                                    <td>nec</td>
+                                    <td>odio</td>
+                                    <td>Praesent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,012</td>
+                                    <td>taciti</td>
+                                    <td>sociosqu</td>
+                                    <td>ad</td>
+                                    <td>litora</td>
+                                </tr>
+                                <tr>
+                                    <td>1,013</td>
+                                    <td>torquent</td>
+                                    <td>per</td>
+                                    <td>conubia</td>
+                                    <td>nostra</td>
+                                </tr>
+                                <tr>
+                                    <td>1,014</td>
+                                    <td>per</td>
+                                    <td>inceptos</td>
+                                    <td>himenaeos</td>
+                                    <td>Curabitur</td>
+                                </tr>
+                                <tr>
+                                    <td>1,015</td>
+                                    <td>sodales</td>
+                                    <td>ligula</td>
+                                    <td>in</td>
+                                    <td>libero</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--End Table--> 
                 </main>
             </div>
         </div>

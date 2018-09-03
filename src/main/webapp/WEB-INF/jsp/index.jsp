@@ -84,9 +84,9 @@
                             </button>
                         </div>
                     </div>
-                    <a href="${pageContext.request.contextPath}/personList">Person</a>
-                    <a href="${pageContext.request.contextPath}/region">Region</a>
-                    <!--<canvas class="my-4" id="myChart" width="900" height="380"></canvas>-->
+                    <!--content-->
+                    ini dashboard
+                    <!--End Content-->
                 </main>
             </div>
         </div>

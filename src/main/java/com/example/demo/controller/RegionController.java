@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author misbah alkhafadh
  */
 public class RegionController {
-    private static List<Regions> region = new ArrayList<Regions>();
-    
-    @RequestMapping(value = {"/region"}, method = RequestMethod.GET)
-    public String viewRegionList(Model model) {
-//        List<Regions> list = RegionDAO.layDS();
-
-        model.addAttribute("regions", region);
-        return "region";
-    }
+//    private static List<Regions> region = new ArrayList<Regions>();
+//    
+//    @RequestMapping(value = {"/region"}, method = RequestMethod.GET)
+//    public String viewRegionList(Model model) {
+////        List<Regions> list = RegionDAO.layDS();
+//
+//        model.addAttribute("regions", region);
+//        return "region";
+//    }
 }

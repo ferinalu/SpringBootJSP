@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MainController {
 
     private static List<Person> persons = new ArrayList<Person>();
-//    private static List<Regions> region = new ArrayList<Regions>();
 
     static {
         persons.add(new Person("Bill", "Gates"));
@@ -40,11 +39,9 @@ public class MainController {
         return "personList";
     }
 
-//    @RequestMapping(value = {"/region"}, method = RequestMethod.GET)
-//    public String viewRegionList(Model model) {
-////        List<Regions> list = RegionDAO.layDS();
-//
-//        model.addAttribute("regions", region);
-//        return "region";
-//    }
+    @RequestMapping(value = {"/region"}, method = RequestMethod.GET)
+    public String viewRegionList(Model model) {
+
+        return "region";
+    }
 }

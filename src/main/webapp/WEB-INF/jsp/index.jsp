@@ -28,7 +28,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="countrie"><span data-feather="file"></span> Country</a>
+                                <a class="nav-link" href="country"><span data-feather="file"></span> Country</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="department"><span data-feather="shopping-cart"></span> Department</a>
